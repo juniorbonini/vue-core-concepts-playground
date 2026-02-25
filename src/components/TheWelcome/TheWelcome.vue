@@ -4,9 +4,7 @@ import IconDoc from "@/components/icons/IconDocumentation.vue";
 import IconSupport from "@/components/icons/IconSupport.vue";
 import IconEco from "@/components/icons/IconEcoSystem.vue";
 import IconTool from "@/components/icons/IconTooling.vue";
-import IconCommunity from "../icons/IconCommunity.vue";
-
-const openReadmeEditor = () => fetch("/__open-in-editor?file=README.md");
+import IconCommunity from "@/components/icons/IconCommunity.vue";
 </script>
 
 <template>
@@ -52,13 +50,6 @@ const openReadmeEditor = () => fetch("/__open-in-editor?file=README.md");
     /
     <a href="https://playwright.dev/" target="_blank" rel="noopener">
       Playwright </a
-    >.
-
-    <br />
-
-    Mais instruções estão disponíveis em
-    <a href="javascript:void(0)" @click="openReadmeInEditor">
-      <code>README.md</code> </a
     >.
   </Container>
 
