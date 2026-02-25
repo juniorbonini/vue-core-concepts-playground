@@ -1,18 +1,18 @@
 <template>
-  <div class="itemContainer">
+  <div class="item">
     <i>
-      <slot class="icon"></slot>
+      <slot name="icon"></slot>
     </i>
     <div class="details">
       <h3>
-        <slot class="heading"></slot>
+        <slot name="heading"></slot>
       </h3>
       <slot></slot>
     </div>
   </div>
 </template>
 <style scoped>
-.itemContainer {
+.item {
   margin-top: 2rem;
   display: flex;
   position: relative;
@@ -39,43 +39,42 @@ h3 {
   color: var(--color-heading);
 }
 @media (min-width: 64rem) {
-  .itemContainer {
+  .item {
     margin-top: 0;
     padding: 0.4rem 0 1rem calc(var(--section-gap) / 2);
   }
   i {
-    top: calc(50% - 1.563rem);
+    top: calc(50% - 25px);
     left: -1.625rem;
     position: absolute;
-    border: 0.63rem solid var(--color-border);
-    border-radius: 0.8rem;
+    border: 0.1rem solid var(--color-border);
+    background: var(--color-background);
+    border-radius: 0.5rem;
     width: 3.125rem;
     height: 3.125rem;
   }
 
-  .itemContainer:before {
-    content: "";
-    border-left: 0.63rem soli var(--color-border);
+  .item:before {
+    content: " ";
+    border-left: 0.63rem solid var(--color-border);
     position: absolute;
     left: 0;
-    bottom: calc(50% + 1.563rem);
-    height: calcl(50% - 1.563rem);
   }
 
-  .itemContainer:after {
-    content: "";
-    border-left: 1px solid var(--color-border);
+  .item:after {
+    content: " ";
+    border-left: 0.1rem solid var(--color-border);
     position: absolute;
     left: 0;
-    bottom: calc(50% + 1.563rem);
-    height: calc(50% - 1.563rem);
+    top: calc(50% + 25px);
+    height: calc(100% - 25px);
   }
 
-  .itemContainer:first-of-type:before {
+  .item:first-of-type:before {
     display: none;
   }
 
-  .itemContainer:last-of-type:after {
+  .item:last-of-type:after {
     display: none;
   }
 }
