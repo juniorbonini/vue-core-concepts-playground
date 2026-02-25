@@ -1,5 +1,6 @@
 <script setup>
 import HelloWorld from "./components/HelloWorld/HelloWorld.vue";
+import TheWelcome from "./components/TheWelcome/TheWelcome.vue";
 </script>
 
 <template>
@@ -11,11 +12,13 @@ import HelloWorld from "./components/HelloWorld/HelloWorld.vue";
       width="125"
       height="125"
     />
-    <div class="container">
+    <div class="wrapper">
       <HelloWorld message="Você conseguiu!" />
     </div>
   </header>
-
+  <main>
+    <TheWelcome />
+  </main>
 </template>
 
 <style scoped>
@@ -39,7 +42,7 @@ header {
     margin: 0 2rem 0 0;
   }
 
-  .container {
+  .wrapper {
     display: flex;
     place-content: flex-start;
     flex-wrap: wrap;
