@@ -1,5 +1,4 @@
 <script setup>
-import styles from "./style.module.css";
 defineProps({
   message: {
     type: String,

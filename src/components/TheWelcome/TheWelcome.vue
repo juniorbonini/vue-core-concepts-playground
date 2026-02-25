@@ -9,7 +9,7 @@ const openReadmeEditor = () => fetch("/__open-in-editor?file=README.md");
 
 <template>
   <h1>Welcome item aqui</h1>
-  <template #icon>
+  <template .icon>
     <IconDoc />
   </template>
 </template>
